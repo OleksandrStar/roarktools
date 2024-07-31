@@ -1,0 +1,101 @@
+{
+    "language": "العربية",
+    "value": "د.إ",
+    "routes" : {
+        "home": "الرئيسية",
+        "products": "المنتجات",
+        "contactsUs": "اتصل بنا",
+        "resources": "الموارد",
+        "blog": "المدونة"
+    },
+    "burger-menu": {
+        "menu": "قائمة",
+        "languages": "اللغات",
+        "telephone-number": "رقم الهاتف",
+        "contactUs": "اتصل بنا"
+    },
+    "homepage":{
+        "viewBlogs": "عرض جميع المدونات",
+        "blogs": "المدونات",
+        "readMore": "اقرأ المزيد",
+        "aboutUs": "عن ",
+        "aboutUsSecondary": "نحن",
+        "aboutUsDesc": "Roark Tools هي الشركة الرائدة في الأدوات الهيدروليكية والهوائية الدقيقة والمتينة والمعتمدة. سنوات من الخبرة ساعدتنا على إنشاء أدوات رائدة في الصناعة تكون دقيقة وبأسعار معقولة ومصممة لتدوم. نحن نفخر بتسليم أدوات عزم الدوران الهيدروليكية والهوائية بجودة عالية وبأسعار معقولة بسرعة.",
+        "catalog":"كتالوج",
+        "title":"حلّك للمشكلة",
+        "viewProjects":"عرض جميع المنتجات",
+        "products":"منتجات",
+        "services": "خدماتنا ",
+        "servicesSecondary": "خدمات",
+        "ourProducts":"منتجاتنا",
+        "ourProductsDesc":"توفر Roark Tools معدات التثبيت الصناعية الثقيلة للشراء أو الإيجار.",
+        "contactUsDesc":"سنساعد في الإجابة على أي من أسئلتك.",
+        "servicesOur":"خدمات التأجير / التثبيت بالبراغي",
+        "servicesOurDesc":"خدمات التأجير والتثبيت متاحة حسب الطلب."
+
+      },
+      "alert":{
+        "successAlert": "تم إرسال الرسالة!"
+    },
+    "required":{
+        "type": "نوع الطلب مطلوب",
+        "name": "الاسم مطلوب",
+        "emailType": "تنسيق البريد الإلكتروني غير صحيح",
+        "email": "البريد الإلكتروني مطلوب",
+        "message": "الرسالة مطلوبة"
+    },
+    "form":{
+        "requireType": "ما نوع الطلب الذي لديك؟",
+        "name": "اسمك",
+        "email": "بريدك الإلكتروني",
+        "message": "الرسالة",
+        "submit": "إرسال"
+    },
+    "contactUs":{
+        "contacts": "جهات الاتصال",
+        "questions": "الأسئلة ",
+        "or": "أو ",
+        "inquiries": "الاستفسارات؟",
+        "email": "البريد الإلكتروني",
+        "phone": "الهاتف",
+        "fax": "الفاكس",
+        "address": "العنوان"
+    },
+    "resourses":{
+        "resourses": "الموارد",
+        "search": "بحث",
+        "searchPlaceholder": "اكتب المورد...",
+        "select": "اختر الفئة",
+        "brochures": "الكتيبات",
+        "manuals": "الأدلة"
+    },
+    "blogs":{
+        "title": "المدونات",
+        "filterBy": "التصفية بواسطة:",
+        "all": "الكل",
+        "new": "جديد",
+        "old": "قديم",
+        "moreBlogs": "المزيد من المدونات"
+    },
+    "products":{
+        "all": "الكل",
+            "less expensive": "أقل تكلفة",
+    "more expensive": "أكثر تكلفة"
+    },
+"product": {
+    "addToBucket": "أضف إلى السلة",
+    "features": "الميزات",
+    "manuals": "الكتيبات",
+    "technicalsData": "البيانات الفنية",
+    "schemas": "المخططات"
+},
+"bucket": {
+    "addedProduct": "تم إضافة المنتج!",
+    "yourBucket": "سلتك",
+    "emptyBucket": "لا توجد عناصر في سلتك.",
+    "buy": "شراء"
+}
+}
+
+
+

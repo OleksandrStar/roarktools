@@ -1,0 +1,96 @@
+{
+    "language": "Türkçe",
+    "value": "₺",
+    "routes" : {
+        "home": "Ana Sayfa",
+        "products": "Ürünler",
+        "contactsUs": "Bize Ulaşın",
+        "resources": "Kaynaklar",
+        "blog": "Blog"
+    },
+    "burger-menu": {
+        "menu": "Menü",
+        "languages": "Diller",
+        "telephone-number": "Telefon Numarası",
+        "contactUs": "Bize Ulaşın"
+    },
+    "homepage":{
+      "viewBlogs": "Tüm Blogları Görüntüle",
+      "blogs": "Bloglar",
+      "readMore": "Daha Fazla Oku",
+      "aboutUs": "Hakkında ",
+      "aboutUsSecondary": "biz",
+      "aboutUsDesc": "Roark Tools, güvenilir, dayanıklı ve hassas hidrolik ve pnömatik tork aletlerinde liderdir. Onlarca yıllık deneyim, endüstri lideri, doğru, uygun fiyatlı ve dayanıklı aletler oluşturmamıza yardımcı oldu. Kaliteli hidrolik ve pnömatik tork aletlerini makul fiyatlarla hızlı bir şekilde teslim etmekle gurur duyuyoruz.",
+        "catalog":"Katalog",
+        "title":"soruna çözümünüz",
+        "viewProjects":"Tüm Ürünleri Görüntüle",
+        "products":"Ürünler",
+        "services": "HİZMETLERİMİZ ",
+        "servicesSecondary": "HİZMETLER",
+        "ourProducts":"Ürünlerimiz",
+        "ourProductsDesc":"Roark Tools ağır endüstriyel cıvata ekipmanları satış veya kiralama hizmeti sunar.",
+        "contactUsDesc":"Herhangi bir sorunuzda yardımcı olacağız.",
+        "servicesOur":"Kiralama/Vida Hizmetleri",
+        "servicesOurDesc":"Kiralama ve cıvata sıkma hizmetleri talep üzerine mevcuttur."
+      },
+      "alert":{
+        "successAlert": "Mesaj gönderildi!"
+      }
+      ,
+      "required":{    "type": "Talep türü gereklidir",
+      "name": "İsim gerekli",
+      "emailType": "Geçersiz e-posta formatı",
+      "email": "E-posta gereklidir",
+      "message": "Mesaj gereklidir"},
+      "form":{
+        "requireType": "Hangi tür bir talebiniz var?",
+        "name": "Adınız",
+        "email": "E-posta adresiniz",
+        "message": "Mesaj",
+        "submit": "Gönder"
+      },
+      "contactUs":{
+        "contacts": "İletişim Bilgileri",
+        "questions": "SORULAR ",
+        "or": "VEYA ",
+        "inquiries": "SORULAR?",
+        "email": "E-posta",
+        "phone": "Telefon",
+        "fax": "Faks",
+        "address": "Adres"
+            },
+            "resourses":{
+              "resourses": "Kaynaklar",
+              "search": "Ara",
+              "searchPlaceholder": "Kaynak yazın...",
+              "select": "Kategori seçin",
+              "brochures": "Broşürler",
+              "manuals": "Kılavuzlar"
+          },
+          "blogs":{
+            "title": "Bloglar",
+            "filterBy": "Filtrele:",
+            "all": "Tümü",
+            "new": "Yeni",
+            "old": "Eski",
+            "moreBlogs": "Daha fazla blog"
+          }
+          ,    "products":{
+            "all": "Tümü",
+    "less expensive": "Daha ucuz",
+    "more expensive": "Daha pahalı"
+                      },
+                      "product": {
+    "addToBucket": "Sepete ekle",
+    "features": "Özellikler",
+    "manuals": "kılavuzlar",
+    "technicalsData": "teknik veriler",
+    "schemas": "şemalar"
+},
+"bucket": {
+    "addedProduct": "Ürün eklendi!",
+    "yourBucket": "Sepetiniz",
+    "emptyBucket": "Sepetinizde ürün yok.",
+    "buy": "Satın al"
+}
+}
