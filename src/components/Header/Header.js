@@ -95,35 +95,6 @@ const Header = ({ menu }) => {
           </div>
           <div className='laptop:block hidden'>
             <div className='flex gap-6'>
-              <div className='group'>
-                <a
-                  className='flex items-center  text-white font-normal group-hover:text-redColor ease-out transition-all cursor-pointer'
-                  href='tel:+16104244300'
-                >
-                  <div className='flex items-center h-[34px] opacity-0 group-hover:opacity-100 transition-all ease-in px-2 border-redColor border'>
-                    +1 610 424 4300
-                  </div>
-                  <div className='w-[34px] h-[34px] flex items-center group-hover:border-redColor justify-center border group-hover:bg-white group-hover:text-redColor'>
-                    <svg
-                      xmlns='http://www.w3.org/2000/svg'
-                      width='20'
-                      height='20'
-                      viewBox='0 0 24 24'
-                      fill='none'
-                      stroke='white'
-                      strokeWidth='2'
-                      strokeLinecap='round'
-                      strokeLinejoin='round'
-                      className='icon icon-tabler icons-tabler-outline icon-tabler-phone-call group-hover:stroke-redColor group-hover:scale-125 transition-all ease-out group-hover:animate-tada'
-                    >
-                      <path stroke='none' d='M0 0h24v24H0z' fill='none' />
-                      <path d='M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2' />
-                      <path d='M15 7a2 2 0 0 1 2 2' />
-                      <path d='M15 3a6 6 0 0 1 6 6' />
-                    </svg>
-                  </div>
-                </a>
-              </div>
               <div className='flex gap-1'>
                 {languageList.map((language, index) => {
                   return (

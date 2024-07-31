@@ -4,9 +4,9 @@
     "routes" : {
         "home": "Home",
         "products": "Products",
-        "contactsUs": "Contacts Us",
         "resources": "Resources",
-        "blog": "Blog"
+        "blog": "Blog",
+        "contactsUs": "Contacts Us"
     },
     "burger-menu" : {
         "menu": "Menu",
@@ -83,7 +83,7 @@
         "more expensive":"More expensive"
     },
     "product":{
-        "addToBucket":"Add to bucket",
+        "addToBucket":"Add to cart",
         "features":"Features",
         "manuals":"manuals",
         "technicalsData":"technicals data",
