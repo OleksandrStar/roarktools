@@ -142,46 +142,50 @@ export default function Product() {
                         />
                       ))}
                   </Slider>
-                  <button
-                    className='absolute top-[50%] -translate-y-1/2'
-                    onClick={() => sliderRef?.current?.slickPrev()}
-                  >
-                    <svg
-                      xmlns='http://www.w3.org/2000/svg'
-                      width='40'
-                      height='40'
-                      viewBox='0 0 24 24'
-                      fill='none'
-                      stroke='currentColor'
-                      strokeWidth='2'
-                      strokeLinecap='round'
-                      strokeLinejoin='round'
-                      className='icon icon-tabler icons-tabler-outline icon-tabler-chevron-left'
-                    >
-                      <path stroke='none' d='M0 0h24v24H0z' fill='none' />
-                      <path d='M15 6l-6 6l6 6' />
-                    </svg>
-                  </button>
-                  <button
-                    className='absolute top-[50%] -translate-y-1/2 right-0 rotate-180'
-                    onClick={() => sliderRef?.current?.slickNext()}
-                  >
-                    <svg
-                      xmlns='http://www.w3.org/2000/svg'
-                      width='40'
-                      height='40'
-                      viewBox='0 0 24 24'
-                      fill='none'
-                      stroke='currentColor'
-                      strokeWidth='2'
-                      strokeLinecap='round'
-                      strokeLinejoin='round'
-                      className='icon icon-tabler icons-tabler-outline icon-tabler-chevron-left'
-                    >
-                      <path stroke='none' d='M0 0h24v24H0z' fill='none' />
-                      <path d='M15 6l-6 6l6 6' />
-                    </svg>
-                  </button>
+                  {filteredData.images.length && (
+                    <>
+                      <button
+                        className='absolute top-[50%] -translate-y-1/2'
+                        onClick={() => sliderRef?.current?.slickPrev()}
+                      >
+                        <svg
+                          xmlns='http://www.w3.org/2000/svg'
+                          width='40'
+                          height='40'
+                          viewBox='0 0 24 24'
+                          fill='none'
+                          stroke='currentColor'
+                          strokeWidth='2'
+                          strokeLinecap='round'
+                          strokeLinejoin='round'
+                          className='icon icon-tabler icons-tabler-outline icon-tabler-chevron-left'
+                        >
+                          <path stroke='none' d='M0 0h24v24H0z' fill='none' />
+                          <path d='M15 6l-6 6l6 6' />
+                        </svg>
+                      </button>
+                      <button
+                        className='absolute top-[50%] -translate-y-1/2 right-0 rotate-180'
+                        onClick={() => sliderRef?.current?.slickNext()}
+                      >
+                        <svg
+                          xmlns='http://www.w3.org/2000/svg'
+                          width='40'
+                          height='40'
+                          viewBox='0 0 24 24'
+                          fill='none'
+                          stroke='currentColor'
+                          strokeWidth='2'
+                          strokeLinecap='round'
+                          strokeLinejoin='round'
+                          className='icon icon-tabler icons-tabler-outline icon-tabler-chevron-left'
+                        >
+                          <path stroke='none' d='M0 0h24v24H0z' fill='none' />
+                          <path d='M15 6l-6 6l6 6' />
+                        </svg>
+                      </button>
+                    </>
+                  )}
                 </div>
                 <div className='flex flex-col justify-between px-2 lg:px-8'>
                   <div className='flex flex-col gap-4 lg:gap-2 '>

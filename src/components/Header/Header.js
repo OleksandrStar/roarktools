@@ -13,7 +13,28 @@ const Header = ({ menu }) => {
   const [activeLanguage, setActiveLanguage] = useState(
     localStorage.getItem('languageRoark') || 'en'
   )
-  const languageList = ['en', 'pt', 'ru', 'ar', 'tr']
+  const languageList = [
+    {
+      title: 'ENG',
+      lang: 'en',
+    },
+    {
+      title: 'POR',
+      lang: 'pt',
+    },
+    {
+      title: 'РУС',
+      lang: 'ru',
+    },
+    {
+      title: 'عرب',
+      lang: 'ar',
+    },
+    {
+      title: 'TÜR',
+      lang: 'tr',
+    },
+  ]
   const [openModal, setOpenModal] = useState(false)
 
   const changeLanguage = (lng) => {
@@ -101,18 +122,18 @@ const Header = ({ menu }) => {
                     <div
                       key={index}
                       onClick={() => {
-                        setActiveLanguage(language)
-                        changeLanguage(language)
-                        localStorage.setItem('languageRoark', language)
+                        setActiveLanguage(language.lang)
+                        changeLanguage(language.lang)
+                        localStorage.setItem('languageRoark', language.lang)
                       }}
                       className={clsx(
-                        activeLanguage === language
+                        activeLanguage === language.lang
                           ? 'bg-white text-redColor border-redColor'
                           : 'text-white border-white',
                         'w-[34px] hover:scale-110 transition-all ease-out cursor-pointer hover:bg-white hover:text-redColor hover:border-redColor h-[34px] flex items-center justify-center border  uppercase font-normal'
                       )}
                     >
-                      {language}
+                      {language.title}
                     </div>
                   )
                 })}
@@ -249,19 +270,19 @@ const BurgerMenu = ({ languageList, menu }) => {
                     <div
                       key={key}
                       onClick={() => {
-                        setActiveLanguage(language)
-                        changeLanguage(language)
+                        setActiveLanguage(language.lang)
+                        changeLanguage(language.lang)
                         setOpenBurgerMenu(false)
-                        localStorage.setItem('languageRoark', language)
+                        localStorage.setItem('languageRoark', language.lang)
                       }}
                       className={clsx(
-                        activeLanguage === language
+                        activeLanguage === language.lang
                           ? 'bg-white text-redColor border-redColor'
                           : 'text-white border-white',
                         'w-[40px] hover:scale-110 transition-all ease-out cursor-pointer hover:bg-white hover:text-redColor hover:border-redColor h-[40px] flex items-center justify-center border  uppercase font-normal'
                       )}
                     >
-                      {language}
+                      {language.title}
                     </div>
                   )
                 })}
