@@ -11,8 +11,8 @@ import ManualsListEditItem from '../AdminPanel/components/AdminResources/compone
 import ManualsAddItem from '../AdminPanel/components/AdminResources/components/ManualsList/ManualsAddItem'
 import AdminBlogsAddItem from '../AdminPanel/components/AdminBlogs/components/AdminBlogsAddItem'
 import AdminBlogsEditItem from '../AdminPanel/components/AdminBlogs/components/AdminBlogsEditItem'
-import CatalogAddItemLayout from '../AdminPanel/components/CatalogItemEditor/components/CatalogAddItemLayout'
 import CatalogAddItem from '../AdminPanel/components/CatalogItemEditor/components/CatalogAddItem/CatalogAddItem'
+import ProtectedRoute from './ProtectedRoute'
 
 const AdminLayout = () => {
   return (
@@ -31,35 +31,44 @@ const AdminLayout = () => {
                     key={key}
                     exact={true}
                     path={`${route.path}`}
-                    element={<route.component />}
+                    element={<ProtectedRoute element={<route.component />} />}
                   />
                 )
               })}
+
               <Route
                 path={'catalog/:id'}
-                element={<CatalogItemEditor />}
-              ></Route>
-              <Route path={'catalog/add'} element={<CatalogAddItem />}></Route>
-              <Route
-                path={'resources/:id'}
-                element={<BroshuresListEditItem />}
-              ></Route>
-              <Route
-                path={'resources/brochures/add'}
-                element={<BrochureAddItem />}
-              ></Route>
-              <Route
-                path={'resources/manuals/:id'}
-                element={<ManualsListEditItem />}
-              ></Route>
-              <Route
-                path={'resources/manuals/add'}
-                element={<ManualsAddItem />}
+                element={<ProtectedRoute element={<CatalogItemEditor />} />}
               ></Route>
 
-              <Route path={'blogs/add'} element={<AdminBlogsAddItem />} />
-              <Route path={'blogs/:id'} element={<AdminBlogsEditItem />} />
-
+              <Route
+                path='catalog/add'
+                element={<ProtectedRoute element={<CatalogAddItem />} />}
+              />
+              <Route
+                path='resources/:id'
+                element={<ProtectedRoute element={<BroshuresListEditItem />} />}
+              />
+              <Route
+                path='resources/brochures/add'
+                element={<ProtectedRoute element={<BrochureAddItem />} />}
+              />
+              <Route
+                path='resources/manuals/:id'
+                element={<ProtectedRoute element={<ManualsListEditItem />} />}
+              />
+              <Route
+                path='resources/manuals/add'
+                element={<ProtectedRoute element={<ManualsAddItem />} />}
+              />
+              <Route
+                path='blogs/add'
+                element={<ProtectedRoute element={<AdminBlogsAddItem />} />}
+              />
+              <Route
+                path='blogs/:id'
+                element={<ProtectedRoute element={<AdminBlogsEditItem />} />}
+              />
               <Route
                 path='*'
                 element={

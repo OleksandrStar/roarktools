@@ -7,7 +7,6 @@ import {
 import { useSelector } from 'react-redux'
 import React, { lazy, Suspense, useEffect } from 'react'
 import { useTranslation } from 'react-i18next'
-import LogoImg from '../../assets/logo.png'
 
 const Home = lazy(() => import('../Home/Home'))
 const Contact = lazy(() => import('../Contact/Contact'))
