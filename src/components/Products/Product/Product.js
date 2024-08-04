@@ -13,16 +13,6 @@ import { add } from '../../../redux/slices/BucketSlice'
 import { toast, ToastContainer } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 
-var settings = {
-  dots: false,
-  infinite: true,
-  speed: 500,
-  slidesToShow: 1,
-  slidesToScroll: 1,
-  autoplay: true,
-  autoplaySpeed: 5000,
-}
-
 export default function Product() {
   const { i18n, t } = useTranslation()
   const tabs = [
@@ -64,16 +54,19 @@ export default function Product() {
     if (bucketData) {
       parsedBucketData = JSON.parse(bucketData)
     }
-
     const dataToAdd = Array.isArray(filteredData)
       ? filteredData
       : [filteredData]
 
     parsedBucketData.push(...dataToAdd)
+    const list = parsedBucketData.map((i, index) => ({
+      ...i,
+      id: `${index}${new Date().getTime()}`,
+    }))
 
-    localStorage.setItem('bucketData', JSON.stringify(parsedBucketData))
+    localStorage.setItem('bucketData', JSON.stringify(list))
 
-    dispatch(add(filteredData))
+    dispatch(add(list))
   }
 
   if (!filteredData) {
@@ -82,6 +75,16 @@ export default function Product() {
         <div className='w-full min-h-[100vh] pt-[100px] '></div>
       </MenuLayout>
     )
+  }
+
+  var settings = {
+    dots: false,
+    infinite: filteredData.images && filteredData.images.length ? true : false,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 5000,
   }
 
   const notify = () =>
@@ -95,6 +98,7 @@ export default function Product() {
       progress: undefined,
       theme: 'light',
     })
+
   return (
     <>
       <ToastContainer
@@ -129,63 +133,75 @@ export default function Product() {
               )}
               <div className='grid grid-cols-1 lg:grid-cols-2 gap-8 w-full max-w-[1260px] mx-auto pb-12'>
                 <div className='w-full h-full max-h-[200px] md:max-h-[400px] relative'>
-                  <Slider {...settings} ref={sliderRef}>
-                    {filteredData.images &&
-                      filteredData.images.length > 0 &&
-                      filteredData.images.map((image, index) => (
-                        <img
-                          src={image.link}
-                          alt='product image'
-                          key={index}
-                          className='h-full w-full min-h-[200px]
+                  {filteredData.images && filteredData.images.length !== 1 ? (
+                    <Slider {...settings} ref={sliderRef}>
+                      {filteredData.images &&
+                        filteredData.images.length > 0 &&
+                        filteredData.images.map((image, index) => (
+                          <img
+                            src={image.link}
+                            alt='product image'
+                            key={index}
+                            className='h-full w-full min-h-[200px]
                                     max-h-[200px] md:min-h-[400px] md:max-h-[400px] object-contain'
-                        />
-                      ))}
-                  </Slider>
-                  {filteredData.images.length && (
+                          />
+                        ))}
+                    </Slider>
+                  ) : (
                     <>
-                      <button
-                        className='absolute top-[50%] -translate-y-1/2'
-                        onClick={() => sliderRef?.current?.slickPrev()}
-                      >
-                        <svg
-                          xmlns='http://www.w3.org/2000/svg'
-                          width='40'
-                          height='40'
-                          viewBox='0 0 24 24'
-                          fill='none'
-                          stroke='currentColor'
-                          strokeWidth='2'
-                          strokeLinecap='round'
-                          strokeLinejoin='round'
-                          className='icon icon-tabler icons-tabler-outline icon-tabler-chevron-left'
-                        >
-                          <path stroke='none' d='M0 0h24v24H0z' fill='none' />
-                          <path d='M15 6l-6 6l6 6' />
-                        </svg>
-                      </button>
-                      <button
-                        className='absolute top-[50%] -translate-y-1/2 right-0 rotate-180'
-                        onClick={() => sliderRef?.current?.slickNext()}
-                      >
-                        <svg
-                          xmlns='http://www.w3.org/2000/svg'
-                          width='40'
-                          height='40'
-                          viewBox='0 0 24 24'
-                          fill='none'
-                          stroke='currentColor'
-                          strokeWidth='2'
-                          strokeLinecap='round'
-                          strokeLinejoin='round'
-                          className='icon icon-tabler icons-tabler-outline icon-tabler-chevron-left'
-                        >
-                          <path stroke='none' d='M0 0h24v24H0z' fill='none' />
-                          <path d='M15 6l-6 6l6 6' />
-                        </svg>
-                      </button>
+                      <img
+                        src={filteredData.images[0].link}
+                        className='h-full w-full min-h-[200px]
+                                    max-h-[200px] md:min-h-[400px] md:max-h-[400px] object-contain'
+                      />
                     </>
                   )}
+                  {filteredData &&
+                    filteredData.images &&
+                    filteredData.images.length > 1 && (
+                      <>
+                        <button
+                          className='absolute top-[50%] -translate-y-1/2'
+                          onClick={() => sliderRef?.current?.slickPrev()}
+                        >
+                          <svg
+                            xmlns='http://www.w3.org/2000/svg'
+                            width='40'
+                            height='40'
+                            viewBox='0 0 24 24'
+                            fill='none'
+                            stroke='currentColor'
+                            strokeWidth='2'
+                            strokeLinecap='round'
+                            strokeLinejoin='round'
+                            className='icon icon-tabler icons-tabler-outline icon-tabler-chevron-left'
+                          >
+                            <path stroke='none' d='M0 0h24v24H0z' fill='none' />
+                            <path d='M15 6l-6 6l6 6' />
+                          </svg>
+                        </button>
+                        <button
+                          className='absolute top-[50%] -translate-y-1/2 right-0 rotate-180'
+                          onClick={() => sliderRef?.current?.slickNext()}
+                        >
+                          <svg
+                            xmlns='http://www.w3.org/2000/svg'
+                            width='40'
+                            height='40'
+                            viewBox='0 0 24 24'
+                            fill='none'
+                            stroke='currentColor'
+                            strokeWidth='2'
+                            strokeLinecap='round'
+                            strokeLinejoin='round'
+                            className='icon icon-tabler icons-tabler-outline icon-tabler-chevron-left'
+                          >
+                            <path stroke='none' d='M0 0h24v24H0z' fill='none' />
+                            <path d='M15 6l-6 6l6 6' />
+                          </svg>
+                        </button>
+                      </>
+                    )}
                 </div>
                 <div className='flex flex-col justify-between px-2 lg:px-8'>
                   <div className='flex flex-col gap-4 lg:gap-2 '>
