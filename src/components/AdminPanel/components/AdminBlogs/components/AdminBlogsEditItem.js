@@ -221,7 +221,7 @@ const AdminBlogsEditItem = () => {
             type='text'
           />
         </div>
-        <div className='flex flex-col gap-3 mt-3'>
+        <div className='flex flex-col gap-3 mt-5'>
           <div className='text-xl'>Blog Content:</div>
           <div className=''>
             <TextEditor
@@ -231,7 +231,7 @@ const AdminBlogsEditItem = () => {
           </div>
         </div>
 
-        <div className='flex flex-col gap-3 mt-3'>
+        <div className='flex flex-col gap-3 mt-5'>
           <div className='text-xl'>Blog Description:</div>
           <textarea
             className='w-full h-[150px]'
@@ -239,7 +239,7 @@ const AdminBlogsEditItem = () => {
             onChange={(e) => onChangeBlogData(e.target.value, 'description')}
           />
         </div>
-        <div className='flex flex-col mt-3 gap-3 flex-wrap'>
+        <div className='flex flex-col mt-3 gap-3 flex-wrap mt-5'>
           <div className='text-xl'>Blog Images:</div>
           <div className='flex flex-wrap gap-6'>
             {blogData.images.map((image, index) => {
@@ -268,6 +268,7 @@ const AdminBlogsEditItem = () => {
             <div className='relative cursor-pointer h-[300px] w-[300px] border border-black flex justify-center items-center hover:bg-redColor transition-all ease-in hover:text-white'>
               <input
                 type='file'
+                accept='.png, .jpg, .jpeg'
                 className='cursor-pointer absolute top-0 left-0 w-[300px] h-[300px] opacity-0'
                 onChange={handleFileChange}
               />

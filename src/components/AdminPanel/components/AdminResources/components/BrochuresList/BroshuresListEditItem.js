@@ -213,6 +213,7 @@ const BrochureEditItem = () => {
                     type='file'
                     className='absolute top-0 left-0 cursor-pointer w-[300px] h-[50px] opacity-0'
                     onChange={handleFileChange}
+                    accept='.png, .jpg, .jpeg'
                   />
                   <div className='text-center text-white'>Change Image</div>
                 </div>

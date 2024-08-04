@@ -153,13 +153,14 @@ const BrochureAddItem = () => {
       <div className='text-2xl py-2 px-5 border-b-[2px] border-redColor'>
         <span className='text-redColor'>Add Brochure:</span>
       </div>
-      <div className='py-2 px-5'>
+      <div className='py-2 px-5 mt-5'>
         <div className='text-xl'>Brochure Images:</div>
         <div>
           {!file ? (
             <div className='relative cursor-pointer h-[300px] w-[300px] border border-black flex justify-center items-center hover:bg-redColor transition-all ease-in hover:text-white'>
               <input
                 type='file'
+                accept='.png, .jpg, .jpeg'
                 className='cursor-pointer absolute top-0 left-0 w-[300px] h-[300px] opacity-0'
                 onChange={handleFileChange}
               />
@@ -174,6 +175,7 @@ const BrochureAddItem = () => {
               <div className='cursor-pointer w-[300px] h-[50px] relative flex items-center justify-center bg-redColor'>
                 <input
                   type='file'
+                  accept='.png, .jpg, .jpeg'
                   className='absolute top-0 left-0 cursor-pointer w-[300px] h-[50px] opacity-0'
                   onChange={handleFileChange}
                 />
@@ -182,7 +184,7 @@ const BrochureAddItem = () => {
             </div>
           )}
         </div>
-        <div className='text-xl'>Brochure Titles:</div>
+        <div className='text-xl mt-5'>Brochure Titles:</div>
 
         <BroshuresTitle
           brochuresTitle={brochureData.title}
@@ -191,7 +193,7 @@ const BrochureAddItem = () => {
           }
         />
 
-        <div className='text-xl'>Brochure Link:</div>
+        <div className='text-xl mt-5'>Brochure Link:</div>
         <BrochuresLinks
           setBrochuresLinks={(link) =>
             setBrochureData((prev) => ({ ...prev, link: link }))

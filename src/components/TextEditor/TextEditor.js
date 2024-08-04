@@ -34,7 +34,7 @@ TextEditor.modules = {
     [{ size: ['small', false, 'large', 'huge'] }], // Add font size dropdown
     [{ list: 'ordered' }, { list: 'bullet' }],
     ['bold', 'italic', 'underline'],
-    ['image', 'code-block'],
+    ['code-block'],
   ],
 }
 
@@ -47,7 +47,6 @@ TextEditor.formats = [
   'bold',
   'italic',
   'underline',
-  'image',
   'code-block',
 ]
 

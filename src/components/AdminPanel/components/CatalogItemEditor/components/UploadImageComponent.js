@@ -119,6 +119,7 @@ const UploadAndFetchComponent = ({ id: catalogId, setRerenderList }) => {
           <div className='relative cursor-pointer h-[300px] w-[300px] border border-black flex justify-center items-center hover:bg-redColor transition-all ease-in hover:text-white'>
             <input
               type='file'
+              accept='.png, .jpg, .jpeg'
               className='cursor-pointer absolute top-0 left-0 w-[300px] h-[300px] opacity-0'
               onChange={handleFileChange}
             />

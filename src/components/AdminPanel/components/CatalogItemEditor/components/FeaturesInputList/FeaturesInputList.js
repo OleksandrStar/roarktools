@@ -29,7 +29,7 @@ const FeaturesInputList = ({ activeLanguage, setFeatures, features }) => {
   return (
     <div>
       <button
-        className='px-3 py-1 h-[42px] text-lg font-normal uppercase cursor-pointer bg-redColor rounded-lg text-white'
+        className='px-3 py-1 h-[42px] text-lg font-normal uppercase cursor-pointer bg-redColor rounded-lg text-white my-5'
         onClick={() => {
           const newItem = {
             text: '',

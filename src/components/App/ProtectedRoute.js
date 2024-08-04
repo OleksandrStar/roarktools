@@ -4,9 +4,9 @@ import { useSelector } from 'react-redux'
 
 const ProtectedRoute = ({ element }) => {
   const { authAccessToken } = useSelector((state) => state.auth)
-  console.log('authAccessToken', authAccessToken)
-  console.log('element', element)
-  return authAccessToken ? element : <Navigate to='/' replace />
+  const authToken = sessionStorage.getItem('authAccessToken')
+
+  return authAccessToken || authToken ? element : <Navigate to='/' replace />
 }
 
 export default ProtectedRoute

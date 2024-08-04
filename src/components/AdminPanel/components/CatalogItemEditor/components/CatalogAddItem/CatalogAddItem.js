@@ -335,7 +335,7 @@ const CatalogAddItem = () => {
             type='text'
           />
         </div>
-        <div className='flex flex-col'>
+        <div className='flex flex-col my-5'>
           <div className='text-xl'>Product Subtitle:</div>
           <LanguageTabs
             isAddItem={true}
@@ -364,7 +364,7 @@ const CatalogAddItem = () => {
             />
           </LanguageTabs>
         </div>
-        <div className='flex flex-col'>
+        <div className='flex flex-col mt-5'>
           <div className='text-xl'>Product Description:</div>
           <LanguageTabs
             isAddItem={true}
@@ -392,7 +392,7 @@ const CatalogAddItem = () => {
             />
           </LanguageTabs>
         </div>
-        <div className='flex flex-col mt-3 gap-3 flex-wrap'>
+        <div className='flex flex-col mt-5 gap-3 flex-wrap'>
           <div className='text-xl'>Product Images:</div>
           <div className='flex flex-wrap gap-6'>
             {catalogData.images.map((image, index) => {
@@ -421,6 +421,7 @@ const CatalogAddItem = () => {
             <div className='relative cursor-pointer h-[300px] w-[300px] border border-black flex justify-center items-center hover:bg-redColor transition-all ease-in hover:text-white'>
               <input
                 type='file'
+                accept='.png, .jpg, .jpeg'
                 className='cursor-pointer absolute top-0 left-0 w-[300px] h-[300px] opacity-0'
                 onChange={(e) => handleFileChange(e, 'images')}
               />
@@ -428,7 +429,7 @@ const CatalogAddItem = () => {
             </div>
           </div>
         </div>
-        <div className='flex flex-col mt-3 gap-3 flex-wrap'>
+        <div className='flex flex-col mt-5 gap-3 flex-wrap'>
           <div className='text-xl'>Product Manuals Images:</div>
           <div className='flex flex-wrap gap-6'>
             {catalogData.manuals.map((image, index) => {
@@ -457,6 +458,7 @@ const CatalogAddItem = () => {
             <div className='relative cursor-pointer h-[300px] w-[300px] border border-black flex justify-center items-center hover:bg-redColor transition-all ease-in hover:text-white'>
               <input
                 type='file'
+                accept='.png, .jpg, .jpeg'
                 className='cursor-pointer absolute top-0 left-0 w-[300px] h-[300px] opacity-0'
                 onChange={(e) => handleFileChange(e, 'manuals')}
               />
@@ -464,7 +466,7 @@ const CatalogAddItem = () => {
             </div>
           </div>
         </div>
-        <div className='flex flex-col mt-3 gap-3 flex-wrap'>
+        <div className='flex flex-col mt-5 gap-3 flex-wrap'>
           <div className='text-xl'>Product Schema Images:</div>
           <div className='flex flex-wrap gap-6'>
             {catalogData.schema.map((image, index) => {
@@ -493,6 +495,7 @@ const CatalogAddItem = () => {
             <div className='relative cursor-pointer h-[300px] w-[300px] border border-black flex justify-center items-center hover:bg-redColor transition-all ease-in hover:text-white'>
               <input
                 type='file'
+                accept='.png, .jpg, .jpeg'
                 className='cursor-pointer absolute top-0 left-0 w-[300px] h-[300px] opacity-0'
                 onChange={(e) => handleFileChange(e, 'schema')}
               />
@@ -500,7 +503,7 @@ const CatalogAddItem = () => {
             </div>
           </div>
         </div>
-        <div className='flex flex-col mt-3 gap-3 flex-wrap'>
+        <div className='flex flex-col mt-5 gap-3 flex-wrap'>
           <div className='text-xl'>Product Technical Data Images:</div>
           <div className='flex flex-wrap gap-6'>
             {catalogData.technicalData.map((image, index) => {
@@ -529,6 +532,7 @@ const CatalogAddItem = () => {
             <div className='relative cursor-pointer h-[300px] w-[300px] border border-black flex justify-center items-center hover:bg-redColor transition-all ease-in hover:text-white'>
               <input
                 type='file'
+                accept='.png, .jpg, .jpeg'
                 className='cursor-pointer absolute top-0 left-0 w-[300px] h-[300px] opacity-0'
                 onChange={(e) => handleFileChange(e, 'technicalData')}
               />
@@ -536,7 +540,7 @@ const CatalogAddItem = () => {
             </div>
           </div>
         </div>
-        <div className='flex justify-end w-full'>
+        <div className='flex justify-end w-full mt-5'>
           <div className='flex gap-2'>
             <button
               disabled={!areRequiredFieldsNotEmpty(catalogData)}

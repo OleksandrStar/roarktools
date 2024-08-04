@@ -8,6 +8,7 @@ const authSlice = createSlice({
   },
   reducers: {
     setAuthAccessToken(state, action) {
+      sessionStorage.setItem('authAccessToken', action.payload)
       state.authAccessToken = action.payload
     },
   },

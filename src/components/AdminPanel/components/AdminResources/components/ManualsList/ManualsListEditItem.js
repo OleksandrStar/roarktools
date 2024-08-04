@@ -210,6 +210,7 @@ const ManualsListEditItem = () => {
                 <div className='cursor-pointer w-[300px] h-[50px] relative flex items-center justify-center bg-redColor transition-all ease-in'>
                   <input
                     type='file'
+                    accept='.png, .jpg, .jpeg'
                     className='absolute top-0 left-0 cursor-pointer w-[300px] h-[50px] opacity-0'
                     onChange={handleFileChange}
                   />
