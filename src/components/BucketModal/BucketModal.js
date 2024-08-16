@@ -4,6 +4,7 @@ import Trash from '../../assets/trash.svg'
 import { useDispatch } from 'react-redux'
 import { remove } from '../../redux/slices/BucketSlice'
 import Close from '../../assets/close.svg'
+import getStripe from '../../lib/getStripe';
 
 export default function BucketModal({ onClose, data }) {
   const { t } = useTranslation()
@@ -25,6 +26,25 @@ export default function BucketModal({ onClose, data }) {
   const total = data.reduce((sum, item) => {
     return sum + parseFloat(item.price)
   }, 0)
+
+  async function handleCheckout() {
+    const stripe = await getStripe();
+    if (stripe) {
+      const { error } = await stripe.redirectToCheckout({
+        lineItems: [
+          {
+            price: 'price_1PoRbyDOhTUEo9uOwvohizIl', // Replace with your actual price ID
+            quantity: 1,
+          },
+        ],
+        mode: "payment", // or "subscription"
+        successUrl: `http://localhost:3000/success`,
+        cancelUrl: `http://localhost:3000/cancel`,
+        customerEmail: "customer@email.com",
+      });
+      console.warn(error.message);
+    }
+  }
 
   return (
     <div
@@ -87,6 +107,7 @@ export default function BucketModal({ onClose, data }) {
               {t('value')}
             </span>
             <button
+                onClick={handleCheckout}
               className='text-[21px] text-white rounded-lg border-2 border-customGreen bg-customGreen
                         py-2 px-6 transition duration-500 hover:scale-105'
             >

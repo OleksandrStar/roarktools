@@ -150,7 +150,7 @@ export default function Product() {
                   ) : (
                     <>
                       <img
-                        src={filteredData.images[0].link}
+                        src={filteredData  && filteredData.images && filteredData.images[0].link}
                         className='h-full w-full min-h-[200px]
                                     max-h-[200px] md:min-h-[400px] md:max-h-[400px] object-contain'
                       />
