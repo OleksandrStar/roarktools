@@ -1,6 +1,7 @@
 {
     "language": "русский",
     "value": "₽",
+  "wantToBuy": "Хотите купить?",
     "routes" : {
         "home": "Главная",
         "products": "Продукты",

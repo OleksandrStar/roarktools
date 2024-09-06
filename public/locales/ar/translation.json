@@ -1,6 +1,7 @@
 {
     "language": "العربية",
     "value": "د.إ",
+    "wantToBuy": "هل تريد الشراء؟",
     "routes" : {
         "home": "الرئيسية",
         "products": "المنتجات",

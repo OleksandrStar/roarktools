@@ -1,6 +1,7 @@
 {
     "language": "english",
     "value":"$",
+  "wantToBuy": "Want to buy?",
     "routes" : {
         "home": "Home",
         "products": "Products",

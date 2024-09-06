@@ -1,6 +1,7 @@
 {
     "language": "Türkçe",
     "value": "₺",
+  "wantToBuy": "Satın almak ister misiniz?",
     "routes" : {
         "home": "Ana Sayfa",
         "products": "Ürünler",

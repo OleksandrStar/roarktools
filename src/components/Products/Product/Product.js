@@ -23,7 +23,7 @@ export default function Product() {
   const sliderRef = useRef(null)
 
   const { pathname } = useLocation()
-  const [activeTab, setActiveTab] = useState(t('product.manuals'))
+  const [activeTab, setActiveTab] = useState(tabs[0])
   const dispatch = useDispatch()
   let data = useSelector((state) => state.catalog.data)
   const [disabledButton, setDisabledButton] = useState(false)
@@ -235,7 +235,7 @@ export default function Product() {
                   {/*  {t('product.addToBucket')}*/}
                   {/*</button>*/}
                   <div>
-                    <span className="text-[18px]">Want to buy? <span className="text-redColor">{t('burger-menu.contactUs')} :</span></span>
+                    <span className="text-[18px]">{t('wantToBuy')} <span className="text-redColor">{t('burger-menu.contactUs')} :</span></span>
                     <div className='flex gap-2 font-normal text-[24px]'>
                       <strong>{t('contactUs.email')}:</strong> info@roarktools.com
                     </div>
@@ -283,7 +283,7 @@ export default function Product() {
                     ))}
                 </div>
 
-                {activeTab === 'manuals' && filteredData.manuals && (
+                {(activeTab === 'manuals' && filteredData.manuals && filteredData.manuals.length) ? (
                   <div className='flex flex-col gap-4 md:gap-6 items-center w-full'>
                     {filteredData.manuals.length &&
                       filteredData.manuals.map((manual) => (
@@ -294,9 +294,9 @@ export default function Product() {
                         />
                       ))}
                   </div>
-                )}
-                {activeTab === 'technicals data' &&
-                  filteredData.technicalData && (
+                ): <></>}
+                {(activeTab === 'technicals data' &&
+                  filteredData.technicalData && filteredData.technicalData.length) ? (
                     <div className='flex flex-col gap-4 md:gap-6 items-center w-full'>
                       {filteredData.technicalData.length &&
                         filteredData.technicalData.map((technical) => (
@@ -307,8 +307,8 @@ export default function Product() {
                           />
                         ))}
                     </div>
-                  )}
-                {activeTab === 'schemas' && filteredData.schema && (
+                  ) : <></>}
+                {(activeTab === 'schemas' && filteredData.schema && filteredData.schema.length) ? (
                   <div className='flex flex-col gap-4 md:gap-6 items-center w-full'>
                     {filteredData.schema.length &&
                       filteredData.schema.map((schema) => (
@@ -319,7 +319,7 @@ export default function Product() {
                         />
                       ))}
                   </div>
-                )}
+                ): <></>}
               </div>
             </div>
           </div>
