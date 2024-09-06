@@ -66,24 +66,24 @@ const Header = ({ menu }) => {
 
   return (
     <>
-      {bucketData && bucketData.length ? (
-        <button
-          className='fixed  bottom-12 right-12 rounded-[50%] bg-redColor p-4 flex justify-center items-center transition duration-500 hover:scale-105
-        z-[10]'
-          onClick={() => setOpenModal(true)}
-        >
-          <img src={Bucket} className='w-[40px] h-[40px]' alt='bucket' />
-          <div
-            className='absolute bottom-0 right-0 rounded-[50%] bg-black text-white w-[25px] h-[25px] flex items-center justify-center
-      text-[14px]'
-          >
-            {bucketData.length}
-          </div>
-        </button>
-      ) : null}
-      {openModal ? (
-        <BucketModal onClose={() => setOpenModal(false)} data={bucketData} />
-      ) : null}
+      {/*{bucketData && bucketData.length ? (*/}
+      {/*  <button*/}
+      {/*    className='fixed  bottom-12 right-12 rounded-[50%] bg-redColor p-4 flex justify-center items-center transition duration-500 hover:scale-105*/}
+      {/*  z-[10]'*/}
+      {/*    onClick={() => setOpenModal(true)}*/}
+      {/*  >*/}
+      {/*    <img src={Bucket} className='w-[40px] h-[40px]' alt='bucket' />*/}
+      {/*    <div*/}
+      {/*      className='absolute bottom-0 right-0 rounded-[50%] bg-black text-white w-[25px] h-[25px] flex items-center justify-center*/}
+      {/*text-[14px]'*/}
+      {/*    >*/}
+      {/*      {bucketData.length}*/}
+      {/*    </div>*/}
+      {/*  </button>*/}
+      {/*) : null}*/}
+      {/*{openModal ? (*/}
+      {/*  <BucketModal onClose={() => setOpenModal(false)} data={bucketData} />*/}
+      {/*) : null}*/}
       <div className='bg-black fixed w-full z-20'>
         <div className='w-full flex container mx-auto items-center justify-between py-5 px-4 xl:px-5 sm:px-10 laptop:px-6'>
           <div className='flex gap-10 items-center'>

@@ -1,6 +1,6 @@
 import Bolt from '../../../assets/homepage/boltWhite.svg'
 import { useTranslation } from 'react-i18next'
-import { useEffect, useRef, useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import MenuLayout from '../../MenuLayout/MenuLayout'
 import PageHeader from 'components/common/PageHeader'
@@ -215,32 +215,41 @@ export default function Product() {
                         {filteredData.description}
                       </span>
                     )}
-                    {filteredData.price && (
-                      <span className='text-[21px]  pt-2 font-bold'>
-                        {filteredData.price}
-                        {t('value')}
-                      </span>
-                    )}
+                    {/*{filteredData.price && (*/}
+                    {/*  <span className='text-[21px]  pt-2 font-bold'>*/}
+                    {/*    {filteredData.price}*/}
+                    {/*    {t('value')}*/}
+                    {/*  </span>*/}
+                    {/*)}*/}
                   </div>
-                  <button
-                    className={`rounded-xl mt-4 lg:mt-0 border-2 border-black bg-black py-4 px-6 text-white w-max font-bold text-[24px] 
-                                transition duration-500 hover:bg-white hover:text-black`}
-                    style={{
-                      background: disabledButton ? 'grey' : '',
-                      color: disabledButton ? 'black' : '',
-                    }}
-                    onClick={onAddToBucket}
-                    disabled={disabledButton}
-                  >
-                    {t('product.addToBucket')}
-                  </button>
+                  {/*<button*/}
+                  {/*  className={`rounded-xl mt-4 lg:mt-0 border-2 border-black bg-black py-4 px-6 text-white w-max font-bold text-[24px] */}
+                  {/*              transition duration-500 hover:bg-white hover:text-black`}*/}
+                  {/*  style={{*/}
+                  {/*    background: disabledButton ? 'grey' : '',*/}
+                  {/*    color: disabledButton ? 'black' : '',*/}
+                  {/*  }}*/}
+                  {/*  onClick={onAddToBucket}*/}
+                  {/*  disabled={disabledButton}*/}
+                  {/*>*/}
+                  {/*  {t('product.addToBucket')}*/}
+                  {/*</button>*/}
+                  <div>
+                    <span className="text-[18px]">Want to buy? <span className="text-redColor">{t('burger-menu.contactUs')} :</span></span>
+                    <div className='flex gap-2 font-normal text-[24px]'>
+                      <strong>{t('contactUs.email')}:</strong> info@roarktools.com
+                    </div>
+                    <div className='flex gap-2 font-normal text-[24px]'>
+                      <strong>{t('contactUs.phone')}:</strong> +1 610 424 4300
+                    </div>
+                  </div>
                 </div>
               </div>
               <div className='w-full max-w-[1260px] flex flex-col items-center mx-auto mb-16 gap-4 lg:gap-8'>
                 <div className='w-full h-1 bg-black'></div>
                 {filteredData.features && (
-                  <>
-                    <h3 className='font-bold text-[27px] uppercase'>
+                    <>
+                      <h3 className='font-bold text-[27px] uppercase'>
                       {t('product.features')}
                     </h3>
                     <div className='w-full flex items-center flex-col gap-2 lg:gap-6 mb-4'>

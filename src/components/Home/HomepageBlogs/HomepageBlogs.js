@@ -15,7 +15,7 @@ export default function HomepageBlogs(){
     const dispatch = useDispatch()
     const data = useSelector((state) => state.blogs.data)
     const loading = useSelector((state) => state.blogs.loading)
-  
+
     useEffect(() => {
       if (i18n.language) {
         dispatch(fetchData({ collectionName: i18n.language, type: 'blogs' }))
@@ -39,7 +39,8 @@ export default function HomepageBlogs(){
                   <div className="flex flex-col gap-6 w-full h-full" key={item.id}>
                     {item.images && item.images[0].link &&
                     <img src={item.images[0].link} alt={item.title} className="w-full h-[250px] object-cover"/>}
-                    {item.title && <span className='text-[24px]'>
+                    {item.title && <span className="text-[24px] truncate max-w-full overflow-hidden whitespace-nowrap"
+    style={{ textOverflow: 'ellipsis' }}>
                       {item.title}
                     </span>}
                     {item.description && (

@@ -60,7 +60,7 @@ export default function BucketModal({ onClose, data }) {
             <img src={Close} className='w-[30px] h-[30px]' alt='close' />
           </button>
         </div>
-        <div className='w-full flex flex-col gap-8  items-center mt-[15px] h-full max-h-[75vh] lg:max-h-[55vh]'>
+        <div className='w-full flex flex-col gap-8  items-center mt-[15px] h-full md:max-h-[50vh] max-h-[75vh] xl:max-h-[55vh]'>
           <span className='font-bold text-[27px]'>
             {t('bucket.yourBucket')}
           </span>

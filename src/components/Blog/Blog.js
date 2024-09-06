@@ -163,7 +163,8 @@ export default function Blog() {
                               />
                             )}
                             {item.title && (
-                              <span className='text-[24px]'>{item.title}</span>
+                              <span className="text-[24px] truncate max-w-full overflow-hidden whitespace-nowrap"
+    style={{ textOverflow: 'ellipsis' }}>{item.title}</span>
                             )}
                             {item.description && (
                               <div className='h-[150px]'>

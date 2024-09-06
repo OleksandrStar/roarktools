@@ -20,7 +20,7 @@ export default function Products() {
     const dispatch = useDispatch()
     let data = useSelector((state) => state.catalog.data)
     const loading = useSelector((state) => state.catalog.loading)
-  
+
     useEffect(() => {
       if (i18n.language) {
         dispatch(fetchData({ collectionName: i18n.language, type: 'calatog' }))
@@ -35,12 +35,12 @@ export default function Products() {
     const changeFilterOpen = () => {
       setOpenFilter(!openFilter)
     }
-  
+
     const onChangeFilter = (filterType) => {
       setOpenFilter(false)
       setSelectFilter(filterType)
     }
-  
+
     let filteredData =
       data && data.length > 0
         ? data.filter((product) =>
@@ -89,37 +89,37 @@ export default function Products() {
                   </div>
                 </div>
               </div>
-              <div className='relative z-100 mb-8'>
-                <button
-                  onClick={changeFilterOpen}
-                  className='flex items-center gap-4 py-2 px-3 border-2 border-black rounded-xl'
-                >
-                  <div className='text-[21px] font-normal'>
-                    <strong>{t('blogs.filterBy')} </strong>
-                    <span>{t(`products.${selectFilter}`)}</span>
-                  </div>
-                  <img
-                    src={ArrowDown}
-                    className={`w-[20px] h-[20px] ${openFilter ? 'rotate-180' : ''} transition duration-300`}
-                    alt='open filter'
-                  />
-                </button>
-                {openFilter && (
-                  <div className='absolute w-full bg-white shadow-lg rounded-xl flex flex-col z-10'>
-                    {filterTypes
-                      .filter((item) => item !== selectFilter)
-                      .map((type, index) => (
-                        <button
-                          onClick={() => onChangeFilter(type)}
-                          className={`border-2 cursor-pointer transition duration-300 hover:bg-[#e0e0e0] px-2 py-3
-                                                        ${index === 1 ? 'rounded-b-xl' : index === 0 ? 'rounded-t-xl' : ''}`}
-                        >
-                          {t(`products.${type}`)}
-                        </button>
-                      ))}
-                  </div>
-                )}
-              </div>
+              {/*<div className='relative z-100 mb-8'>*/}
+              {/*  <button*/}
+              {/*    onClick={changeFilterOpen}*/}
+              {/*    className='flex items-center gap-4 py-2 px-3 border-2 border-black rounded-xl'*/}
+              {/*  >*/}
+              {/*    <div className='text-[21px] font-normal'>*/}
+              {/*      <strong>{t('blogs.filterBy')} </strong>*/}
+              {/*      <span>{t(`products.${selectFilter}`)}</span>*/}
+              {/*    </div>*/}
+              {/*    <img*/}
+              {/*      src={ArrowDown}*/}
+              {/*      className={`w-[20px] h-[20px] ${openFilter ? 'rotate-180' : ''} transition duration-300`}*/}
+              {/*      alt='open filter'*/}
+              {/*    />*/}
+              {/*  </button>*/}
+              {/*  {openFilter && (*/}
+              {/*    <div className='absolute w-full bg-white shadow-lg rounded-xl flex flex-col z-10'>*/}
+              {/*      {filterTypes*/}
+              {/*        .filter((item) => item !== selectFilter)*/}
+              {/*        .map((type, index) => (*/}
+              {/*          <button*/}
+              {/*            onClick={() => onChangeFilter(type)}*/}
+              {/*            className={`border-2 cursor-pointer transition duration-300 hover:bg-[#e0e0e0] px-2 py-3*/}
+              {/*                                          ${index === 1 ? 'rounded-b-xl' : index === 0 ? 'rounded-t-xl' : ''}`}*/}
+              {/*          >*/}
+              {/*            {t(`products.${type}`)}*/}
+              {/*          </button>*/}
+              {/*        ))}*/}
+              {/*    </div>*/}
+              {/*  )}*/}
+              {/*</div>*/}
             </div>
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10'>
             {data && data.length > 0 && !loading ? (
@@ -128,7 +128,7 @@ export default function Products() {
                   <Link
                     to={`/products/${item.id}`}
                     key={index}
-                    className=' shadow-xl flex flex-col gap-4 w-full items-center border-2 border-black py-6 px-2 rounded-[25px] 
+                    className=' shadow-xl flex flex-col gap-4 w-full items-center border-2 border-black py-6 px-2 rounded-[25px]
                     transition duration-500 hover:scale-105'
                     >
                       <img
@@ -145,14 +145,14 @@ export default function Products() {
                           {item.subtitle}
                         </span>
                       )}
-                      {item.price && (
-                        <div className='w-full px-4 flex justify-end'>
-                          <span className='text-[21px] font-bold text-start'>
-                            {item.price}
-                            {t('value')}
-                          </span>
-                        </div>
-                      )}
+                      {/*{item.price && (*/}
+                      {/*  <div className='w-full px-4 flex justify-end'>*/}
+                      {/*    <span className='text-[21px] font-bold text-start'>*/}
+                      {/*      {item.price}*/}
+                      {/*      {t('value')}*/}
+                      {/*    </span>*/}
+                      {/*  </div>*/}
+                      {/*)}*/}
                     </Link>
                   ))}
                 </>
